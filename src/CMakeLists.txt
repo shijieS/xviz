@@ -1,6 +1,8 @@
 find_package(protobuf REQUIRED)
 find_package(fmt REQUIRED)
 
+vehiclas_print_variable_name(protobuf)
+
 # generate protobuf source files
 add_library(
   xviz_pb OBJECT
@@ -19,6 +21,9 @@ target_include_directories(
   xviz_pb PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/generated>
                  $<INSTALL_INTERFACE:include>)
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/generated)
+
+# include protobuf-build/cmake/protobuf protobuf-generate.cmake
+include(${protobuf_BINARY_DIR}/cmake/protobuf/protobuf-generate.cmake)
 
 protobuf_generate(
   TARGET
