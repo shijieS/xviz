@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 if(NOT XVIZ_VERSION)
-  set(XVIZ_VERSION "l.0.0")
+  set(XVIZ_VERSION "0.5.1")
 endif()
 
 project(
