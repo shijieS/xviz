@@ -40,6 +40,8 @@
 #include <iostream>
 #include <string>
 
+#define XVIZ_VERSION "5.2.1"
+
 #ifdef __cpp_lib_format
 #include <format>
 #else
